@@ -8,17 +8,19 @@ fun main(){
     val total: Int = readLine()?.toInt() ?: 0
     println("Введите 1, если вы эксклюзивный автор:")
     val exclusive: Int = readLine()?.toInt() ?: 0
-    calculateFee(amount, total, exclusive)
+    println(calculateFee(amount, total, exclusive))
 
     //Если лень вводить вручную
-    /*calculateFee(30, 100, 1)
-    calculateFee(30, 100, 0)
-    calculateFee(500, 1500, 1)
-    calculateFee(500, 1500, 3423)
-    calculateFee(300, 15000, 1)
-    calculateFee(300, 15000, 15)
-    calculateFee(400, 100000, 1)
-    calculateFee(400, 100000, 0)*/
+    /*
+    println(calculateFee(30, 100, 1))
+    println(calculateFee(30, 100, 0))
+    println(calculateFee(500, 1500, 1))
+    println(calculateFee(500, 1500, 3423))
+    println(calculateFee(300, 15000, 1))
+    println(calculateFee(300, 15000, 15))
+    println(calculateFee(400, 100000, 1))
+    println(calculateFee(400, 100000, 0))
+    */
 
 }
 

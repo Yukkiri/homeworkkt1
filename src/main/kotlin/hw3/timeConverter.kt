@@ -1,8 +1,8 @@
 package hw3
 
-fun timeConverter(time: Int){
+fun timeConverter(time: Int): String {
 
-    val timeString: String = when(time){
+    return when(time){
         0 -> "Только что"
         in 1..59 -> "Менее минуты назад"
         in 60..3600 -> min(time)
@@ -11,8 +11,6 @@ fun timeConverter(time: Int){
         31536000 -> "Год назад"
         else -> "Более года назад"
     }
-
-    println(timeString)
 }
 
 fun min(time: Int): String{

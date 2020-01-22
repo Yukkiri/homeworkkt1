@@ -1,6 +1,6 @@
 package hw2
 
-fun bodyMassIndex(weight: Double, height: Double){
+fun bodyMassIndex(weight: Double, height: Double): String {
     val imt = weight/(height*height/10000)
 
     var verdict: String = when (imt){
@@ -14,6 +14,5 @@ fun bodyMassIndex(weight: Double, height: Double){
         else -> "Ожирение третьей степени"
     }
 
-    println("ИМТ: $imt")
-    println(verdict)
+    return "ИМТ: $imt\n$verdict"
 }
