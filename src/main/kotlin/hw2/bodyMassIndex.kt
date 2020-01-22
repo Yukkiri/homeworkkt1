@@ -1,12 +1,7 @@
 package hw2
 
-fun bodyMassIndex(){
-    println("Введите вес в кг:")
-    val weight: Double = readLine()?.run { toDouble() } ?: 0.0
-    println("Введите рост в см:")
-    val height: Double = readLine()?.run { toDouble()/100 } ?: 0.0
-
-    val imt = weight/(height*height)
+fun bodyMassIndex(weight: Double, height: Double){
+    val imt = weight/(height*height/10000)
 
     var verdict: String = when (imt){
         0.0 -> "Неверно введены данные"

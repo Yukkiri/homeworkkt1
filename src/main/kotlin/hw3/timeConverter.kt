@@ -1,9 +1,8 @@
 package hw3
 
-fun timeConverter(){
-    println("Введите время в секундах")
+fun timeConverter(time: Int){
 
-    val timeString: String = when(val time: Int = readLine()?.toInt() ?: 0){
+    val timeString: String = when(time){
         0 -> "Только что"
         in 1..59 -> "Менее минуты назад"
         in 60..3600 -> min(time)

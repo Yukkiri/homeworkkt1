@@ -1,7 +1,25 @@
 package hw1
 
 fun main(){
-    calculateFee()
+
+    println("Введите сумму текущей продажи:")
+    val amount: Int = readLine()?.toInt() ?: 0
+    println("Введите сумму предыдущих продаж:")
+    val total: Int = readLine()?.toInt() ?: 0
+    println("Введите 1, если вы эксклюзивный автор:")
+    val exclusive: Int = readLine()?.toInt() ?: 0
+    calculateFee(amount, total, exclusive)
+
+    //Если лень вводить вручную
+    /*calculateFee(30, 100, 1)
+    calculateFee(30, 100, 0)
+    calculateFee(500, 1500, 1)
+    calculateFee(500, 1500, 3423)
+    calculateFee(300, 15000, 1)
+    calculateFee(300, 15000, 15)
+    calculateFee(400, 100000, 1)
+    calculateFee(400, 100000, 0)*/
+
 }
 
 /*
