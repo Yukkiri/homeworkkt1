@@ -1,6 +1,6 @@
 package hw1
 
-fun calculateFee(amount: Int, total: Int, exclusive: Int): String {
+fun calculateFee(amount: Int, total: Int, exclusive: Int): Int {
     val firstFee: Double = 0.3
     val secondFee: Double = 0.25
     val thirdFee: Double = 0.2
@@ -18,8 +18,5 @@ fun calculateFee(amount: Int, total: Int, exclusive: Int): String {
         fee -= exclusiveDiscount
     }
 
-    val totalFee: Double = amount*fee
-    val sum: Int = amount+total
-
-    return "Общая сумма продаж: $sum\nТекущая плата: $fee\nК оплате: $totalFee"
+    return (amount*fee).toInt()
 }
